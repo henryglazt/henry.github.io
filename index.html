@@ -11,4 +11,328 @@ div {text-align: center;}
 <div>©henrikisworoaji.me</div>
 
 </body>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CodePen - CSS Among Us Crewmate!</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-96f5da14bc71e5883d519b4eb5e93297dde552c2f91a97fcfb30035219cf1c1a.css">
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+
+
+  <title>CodePen - CSS Among Us Crewmate!</title>
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0,0,0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: var(--cp-font-family);
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; } /* $linkColorOnBlack */
+  </style>
+</head>
+
+<body class="">
+  
+
+  <div id="result-iframe-wrap" role="main">
+
+    <iframe id="result" srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  
+<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+<link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+
+
+  
+  <title>CodePen - CSS Among Us Crewmate!</title>
+  
+  
+  
+  
+<style>
+.crewmate {
+    --shade1: red;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background: #060523;*/
+    overflow: hidden;
+    --unitSize: 1.7vmin;
+}
+
+.symmetry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.canvas {
+    position: relative;
+    width: calc(var(--unitSize) * 80);
+    height: calc(var(--unitSize) * 80);
+    background: white;
+}
+
+.canvas * {
+    position: absolute;
+}
+
+.transform {
+    --x: 0;
+    --y: 0;
+    --r: 0;
+    --s: 0;
+    --sy: 0;
+    --sx: 0;
+    --_scale: 1;
+    transform: scaleX(var(--_scale)) translateX(var(--x)) translateY(var(--y)) rotate(var(--r)) skew(var(--s)) skewX(var(--sx)) skewY(var(--sy));
+}
+
+.flipVertical {
+    --x: 0;
+    --y: 0;
+    --r: 0;
+    --s: 0;
+    --sy: 0;
+    --sx: 0;
+    --_scale: -1;
+    transform: scaleX(var(--_scale)) translateX(var(--x)) translateY(var(--y)) rotate(var(--r)) skew(var(--s)) skewX(var(--sx)) skewY(var(--sy));
+}
+
+.backpack {
+    width: calc(var(--unitSize) * 8);
+    height: calc(var(--unitSize) * 23);
+    background: var(--shade1);
+    border-radius: 30% 50% 50% 30% / 50% 20% 20% 50%;
+    border: calc(var(--unitSize) * 1.2) solid black;
+    position: absolute;
+    --x: calc(var(--unitSize) * -14.5);
+    --y: calc(var(--unitSize) * 2);
+}
+
+.body {
+    width: calc(var(--unitSize) * 28);
+    height: calc(var(--unitSize) * 40);
+    background: var(--shade1);
+    border-radius: 40% 60% 10% 5% / 40% 40% 60% 60%;
+    border: calc(var(--unitSize) * 1.2) solid black;
+    --vClip: 83%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% var(--vClip), 0% var(--vClip));
+    overflow: hidden;
+}
+
+.body::before {
+    width: 103%;
+    height: 93%;
+    background: var(--shade1);
+    border-radius: 50%;
+    filter: brightness(1.7);
+    content: &quot;&quot;;
+    display: block;
+    top: calc(var(--unitSize) * -6);
+    left: calc(var(--unitSize) * 2);
+    position: absolute;
+}
+
+
+.leg {
+    width: calc(var(--unitSize) * 11.4);
+    height: calc(var(--unitSize) * 12.6);
+    background: var(--shade1);
+    border: calc(var(--unitSize) * 0.9) solid black;
+    border-top: none;
+    border-radius: 0% 0% 54% 54% / 29% 0% 72% 100%;
+    --x: calc(var(--unitSize) * -7.83);
+    --y: calc(var(--unitSize) * 17.869999999999997);
+    --r: 0deg;
+}
+
+.leg2 {
+    width: calc(var(--unitSize) * 11.28);
+    height: calc(var(--unitSize) * 9.9);
+    background: var(--shade1);
+    border: calc(var(--unitSize) * 1) solid black;
+    border-block: calc(var(--unitSize) * 1.1) solid;
+    border-top: none;
+    border-radius: 0 0 40% 40% / 0 0 100% 100%;
+    --x: calc(var(--unitSize) * 7.5);
+    --y: calc(var(--unitSize) * 17.6);
+}
+
+.body2 {
+    width: calc(var(--unitSize) * 8.4);
+    height: calc(var(--unitSize) * 2.8);
+    background: var(--shade1);
+    border: calc(var(--unitSize) * 1) none black;
+    border-right: calc(var(--unitSize) * 0.2) solid;
+    border-bottom-style: solid;
+    border-radius: 0 0 100% 0;
+    --x: calc(var(--unitSize) * 1.2);
+    --y: calc(var(--unitSize) * 12.5);
+}
+
+.visor {
+    width: calc(var(--unitSize) * 23.4);
+    height: calc(var(--unitSize) * 15);
+    border-radius: 40% 40% 40% 50% / 50% 60% 50% 47%;
+    border: calc(var(--unitSize) * 1) solid black;
+    background: gray;
+    --y: calc(var(--unitSize) * -7.1);
+    --x: calc(var(--unitSize) * 4.7);
+    overflow: hidden;
+}
+
+.visor::before {
+    content: &quot;&quot;;
+    display: block;
+    position: absolute;
+    background: #bbebff;
+    width: calc(var(--unitSize) * 22);
+    height: calc(var(--unitSize) * 11);
+    border-radius: 0 0 70% 30% / 0 0 100% 100%;
+    left: calc(var(--unitSize) * 1);
+    top: calc(var(--unitSize) * -1);
+    transform: rotate(20deg);
+}
+
+.visor::after {
+    content: &quot;&quot;;
+    display: block;
+    position: absolute;
+    background: white;
+    width: calc(var(--unitSize) * 10);
+    height: calc(var(--unitSize) * 4);
+    border-radius: 50%;
+    left: calc(var(--unitSize) * 8.2);
+    top: calc(var(--unitSize) * 1);
+    transform: rotate(5deg);
+}
+
+.shadow {
+    background: #0004;
+    width: calc(var(--unitSize) * 35);
+    height: calc(var(--unitSize) * 7);
+    border-radius: 50%;
+    --y: calc(var(--unitSize) * 22.5);
+    --x: calc(var(--unitSize) * -1);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <!doctype html>
+<html lang=&quot;en&quot;>
+<head>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;
+          name=&quot;viewport&quot;>
+    <meta content=&quot;ie=edge&quot; http-equiv=&quot;X-UA-Compatible&quot;>
+    <link href=&quot;css/newStyles.css&quot; rel=&quot;stylesheet&quot;>
+    <title>Among Us Crewmate!</title>
+</head>
+<body>
+<div class=&quot;canvas symmetry&quot;>
+    <div class=&quot;crewmate symmetry&quot;>
+        <div class=&quot;shadow transform&quot;></div>
+        <div class=&quot;backpack transform&quot;></div>
+        <div class=&quot;body&quot;></div>
+        <div class=&quot;leg transform&quot;></div>
+        <div class=&quot;leg2 transform&quot;></div>
+        <div class=&quot;body2 transform&quot;></div>
+        <div class=&quot;visor transform&quot;></div>
+    </div>
+</div>
+</body>
+</html>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
+" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+
+  </div>
+
+
+</body></html>
   </html>
